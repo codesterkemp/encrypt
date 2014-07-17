@@ -3,10 +3,11 @@
 
 
 <%= form_tag("/encode", method: "get") do %>
-	<%= text_area_tag(:message, @yahoo, size: "24x6") %>
+	<%= text_area_tag(:message, @msg, size: "24x6") %>
   	<%= label_tag(:p, "Passphase:") %>
   	<%= text_field_tag(:p) %>
   	<%= submit_tag("Encode") %>
+  	<%= text_area_tag(:garbled, @decoded, size: "24x6") %>
 <% end %>
 
 
