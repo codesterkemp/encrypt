@@ -6,9 +6,15 @@ class EncryptController < ApplicationController
   end
 
   def encode
+    if params[:message] == "crazy"
+      redirect_to "/home"
+    else
+      @yahoo = params[:p]
+    end
   end
 
   def decode
+
   end
 
   def crack
