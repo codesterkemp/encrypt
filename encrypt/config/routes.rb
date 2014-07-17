@@ -1,15 +1,25 @@
 Encrypt::Application.routes.draw do
   root :to => 'encrypt#home'
 
-  get "encrypt/home"
+  match 'home' => 'encrypt#home'
 
-  get "encrypt/about"
+  match 'decode' => 'encrypt#decode'
 
-  get "encrypt/encode"
+  match 'about' => 'encrypt#about'
 
-  get "encrypt/decode"
+  match 'encode' => 'encrypt#encode'
 
-  get "encrypt/crack"
+  match 'crack' => 'encrypt#crack'
+
+  # get "encrypt/home"
+
+  # get "encrypt/about"
+
+  # get "encrypt/encode"
+
+  # get "encrypt/decode"
+
+  # get "encrypt/crack"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
