@@ -10,7 +10,6 @@ class EncryptController < ApplicationController
       msg = params[:message]
       key = params[:p]
       @decoded= xordecrypt(msg, key)
-      @msg = msg
     end
   end
 
