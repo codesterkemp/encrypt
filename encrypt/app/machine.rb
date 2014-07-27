@@ -1,20 +1,4 @@
-class EncryptController < ApplicationController
-  def home
-  end
-
-  def about
-  end
-
-  def encode
-    if params[:message]
-      msg = params[:message]
-      key = params[:p]
-      @decoded= xordecrypt(msg, key)
-      @msg = msg
-    end
-  end
-
- def xordecrypt(msg, key, startpoint = 0)
+def xordecrypt(msg, key, startpoint = 0)
     rotor = startpoint
     b = 0
     decryptedmsg = ""
@@ -76,12 +60,15 @@ class EncryptController < ApplicationController
     end
     return char_ret
   end
-
-
-  def decode
-
+# puts escape_char('|',' ')
+  msg ="merry had a little lamb whose fleece was white as snow"
+  scram = xordecrypt(msg, 'key')
+  puts "msg is #{msg}"
+  puts "scrambled msg is #{scram}"
+  descram = xordecrypt(scram, 'key')
+  puts descram
+  if descram == msg
+    puts "Green"
+  else
+    puts ":( Red"
   end
-
-  def crack
-  end
-end
