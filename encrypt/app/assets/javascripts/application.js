@@ -13,3 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+// $(document).ready(function(){
+//     $('input#p').click(function(){
+//         $('label').addClass('highlight');
+//     });
+// });
+
+$(document).ready(function(){
+    $('input#p').click(function(){
+        alert('Enter the password in the box.');
+    });
+});
+
+
+$(document).ready(function(){
+    $('textarea#message').click(function(){
+        alert('Enter the secret text that you would like to encrypt with ciphering XOR encryption.');
+    });
+});

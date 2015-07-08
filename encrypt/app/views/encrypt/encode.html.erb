@@ -1,10 +1,10 @@
 <h1>Encode the Message</h1>
-<p>Put message to encode below.</p>
+<p>STEP 1:  Click on the box below for instructions..</p>
 
 
 <%= form_tag("/encode", method: "get") do %>
-	<%= text_area_tag(:message, "Type your text here.", size: "24x6") %>
-  	<%= label_tag(:p, "Passphase:") %>
+	<%= text_area_tag(:message, "", size: "24x6") %>
+  	<%= label_tag(:p, "STEP 2:  Click on the box to the right.") %>
   	<%= text_field_tag(:p) %>
   	<%= submit_tag("Encode") %>
   	<%= text_area_tag(:garbled, @decoded, size: "24x6") %>
