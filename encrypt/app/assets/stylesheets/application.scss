@@ -12,6 +12,9 @@
  *= require_tree .
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "http://fonts.googleapis.com/css?family=Montserrat";
 
 .wrapper {
     height: 1040px;
@@ -23,6 +26,10 @@
 
 .highlight{
     color: red;
+}
+h1,h2,h3,h4,h5,p{
+    font-size: 20px;
+    font-family: 'Montserrat-Regular', arial;
 }
 
 

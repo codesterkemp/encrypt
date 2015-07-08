@@ -6,7 +6,7 @@
 	<%= text_area_tag(:message, "", size: "24x6") %>
   	<%= label_tag(:p, "STEP 2:  Click on the box to the right.") %>
   	<%= text_field_tag(:p) %>
-  	<%= submit_tag("Encode") %>
+  	<%= submit_tag("Encode", class: "btn btn-danger") %>
   	<%= text_area_tag(:garbled, @decoded, size: "24x6") %>
 <% end %>
 
