@@ -1,9 +1,5 @@
 Encrypt::Application.routes.draw do
-  root :to => 'encrypt#home'
-
-  match 'home' => 'encrypt#home'
-
-  match 'decode' => 'encrypt#decode'
+  root :to => 'encrypt#encode'
 
   match 'about' => 'encrypt#about'
 
@@ -70,7 +66,7 @@ Encrypt::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  
+
 
   # See how all your routes lay out with "rake routes"
 
